@@ -49,7 +49,7 @@ it("should throw an error if parameter isnt passed into the function", () => {
     add();
   };
 
-  expect(result).toThrow();
+  expect(result).toThrow(/Not numbers defined/);
 });
 
 it("should throw an error if provided with multiple arguments insted of array", () => {
@@ -60,5 +60,5 @@ it("should throw an error if provided with multiple arguments insted of array", 
     add(num1, num2);
   }
 
-  expect(result).toThrow();
+  expect(result).toThrow(/is not iterable/);
 })
